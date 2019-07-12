@@ -4,13 +4,13 @@ python manage.py makemigrations
 python manage.py migrate
 `
 
-#Custom User Registration
+# Custom User Registration
 
 # Register user
 http://127.0.0.1:8000/api/v1/users/
 
 ## Input
-``
+<pre>
 {
 	"user":{
 		"name": "ShyamBabu",
@@ -21,7 +21,7 @@ http://127.0.0.1:8000/api/v1/users/
 		"gender":"male"
 	}
 }
-``
+</pre>
 
 ## Output
 ``
@@ -37,6 +37,7 @@ http://127.0.0.1:8000/api/v1/users/
     }
 }
 ``
+
 ---
 
 # Login User 
@@ -44,6 +45,7 @@ http://127.0.0.1:8000/api/v1/users/
 http://127.0.0.1:8000/api/v1/users/login/
 
 ## Input 
+
 ``
 {
 	"user":{
@@ -52,7 +54,9 @@ http://127.0.0.1:8000/api/v1/users/login/
 	}
 }
 ``
+
 ## Output
+
 ``
 {
     "user": {
@@ -61,6 +65,7 @@ http://127.0.0.1:8000/api/v1/users/login/
     }
 }
 ``
+
 ---
 
 # Get Logged In User
@@ -68,10 +73,12 @@ http://127.0.0.1:8000/api/v1/users/login/
 http://127.0.0.1:8000/api/v1/user/
 
 #### Headers
+
 ``
 Key				Value
 Authorization	Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NiwiZXhwIjoxNTY4MTA4MzI0fQ.fvJjY42BuSA2efOBgTclIOicAf2Maf-i2YxKLrjKYBc
 ``
+
 key             type   access_key
 
 ## Output
@@ -85,6 +92,7 @@ key             type   access_key
     }
 }
 ``
+
 ---
 
 # Facebook Authentication API
@@ -114,7 +122,9 @@ http://localhost:8000/social/auth/token
 	"grant_type": "password"
 }
 ``
+
 ## Output
+
 ``
 {
     "access_token": "M5SbatG3IGJco2Df3DhE31Eh1wd52A",
@@ -124,6 +134,7 @@ http://localhost:8000/social/auth/token
     "refresh_token": "fm7tjcABcdr1Bw8oZxLkOtrvm50TfX"
 }
 ``
+
 ---
 
 
@@ -140,6 +151,7 @@ http://localhost:8000/social/auth/convert-token
 	"token": "EAAGKRJG8eL8BAOzTNWcW6TCi5PBczNMzZBFCJSoXpXKY1u1K1JROUw0R9ZBgebeXBhcF5tZAmayZB3CG21h6HZAlXYfhZBxYtfBUQYvfes4wpYwbZCp70shvXnTEyRKDF19jG2E1eWkYwEOrPhNocq1Q8xMvlyWW3ZCWZANIO2Bg3b0e2mgzkPZCNPHaF7xBGq3P35kQZBt8DxUvTETuhZCSBYtV"
 }
 ``
+
 Note: token -> It is given by auth provider like - Facebook, Instagram
 
 ## Output
@@ -164,6 +176,7 @@ Note: token -> It is given by auth provider like - Facebook, Instagram
 
 
 ---
+
 # Check LoggedIn or Not
 
 http://127.0.0.1:8000/api/v1/user/
@@ -175,6 +188,7 @@ http://127.0.0.1:8000/social/users/me/
 Key				Value
 Authorization	Bearer M5SbatG3IGJco2Df3DhE31Eh1wd52A
 ``
+
 key             type   access_key
 
 ## Output
