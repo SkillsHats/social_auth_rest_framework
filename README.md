@@ -10,6 +10,7 @@ python manage.py migrate
 http://127.0.0.1:8000/api/v1/users/
 
 ## Input
+``
 {
 	"user":{
 		"name": "ShyamBabu",
@@ -20,9 +21,10 @@ http://127.0.0.1:8000/api/v1/users/
 		"gender":"male"
 	}
 }
+``
 
 ## Output
-
+``
 {
     "user": {
         "id": 1,
@@ -34,7 +36,7 @@ http://127.0.0.1:8000/api/v1/users/
         "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NiwiZXhwIjoxNTY4MTA4Mjc2fQ.jXVKOkObyN5AH4x8EpMX6bgFvJHA6kbgko3Wav49Hqc"
     }
 }
-
+``
 ---
 
 # Login User 
@@ -42,23 +44,23 @@ http://127.0.0.1:8000/api/v1/users/
 http://127.0.0.1:8000/api/v1/users/login/
 
 ## Input 
-
+``
 {
 	"user":{
 		"email":"sshyambabu06@gmail.com",
 		"password":"shyam12345"
 	}
 }
-
+``
 ## Output
-
+``
 {
     "user": {
         "email": "sshyambabu99@gmail.com",
         "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NiwiZXhwIjoxNTY4MTA4MzI0fQ.fvJjY42BuSA2efOBgTclIOicAf2Maf-i2YxKLrjKYBc"
     }
 }
-
+``
 ---
 
 # Get Logged In User
@@ -66,13 +68,14 @@ http://127.0.0.1:8000/api/v1/users/login/
 http://127.0.0.1:8000/api/v1/user/
 
 #### Headers
+``
 Key				Value
 Authorization	Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NiwiZXhwIjoxNTY4MTA4MzI0fQ.fvJjY42BuSA2efOBgTclIOicAf2Maf-i2YxKLrjKYBc
-
+``
 key             type   access_key
 
 ## Output
-
+``
 {
     "user": {
         "id": 1,
@@ -81,7 +84,7 @@ key             type   access_key
         "name": "ShyamBabu"
     }
 }
-
+``
 ---
 
 # Facebook Authentication API
@@ -102,7 +105,7 @@ key             type   access_key
 http://localhost:8000/social/auth/token
 
 ## Input Data
-
+``
 {
 	"username": "sshyambabu06@gmail.com",
 	"password": "shyam12345",
@@ -110,9 +113,9 @@ http://localhost:8000/social/auth/token
 	"client_secret": "WaKWRq6AJKBfSfteHZC6uc8rAQ3aloiWgnf3wsSsTPXERmJguKMjRVZLvisVXxhPqIuOkEjKngEBPQDhswo8nksI919Xm62lCCe4vILwOH4IrQFgwzSrMlU7WefcjvDC",
 	"grant_type": "password"
 }
-
+``
 ## Output
-
+``
 {
     "access_token": "M5SbatG3IGJco2Df3DhE31Eh1wd52A",
     "expires_in": 36000,
@@ -120,7 +123,7 @@ http://localhost:8000/social/auth/token
     "scope": "read write",
     "refresh_token": "fm7tjcABcdr1Bw8oZxLkOtrvm50TfX"
 }
-
+``
 ---
 
 
@@ -129,17 +132,18 @@ http://localhost:8000/social/auth/token
 http://localhost:8000/social/auth/convert-token
 
 ## Input Data
+``
 {
 	"grant_type": "convert_token",
 	"client_id": "R56sborWjWtAqIajntdXAVjcqzUrqREDB9AfD40k",
 	"backend":"facebook",
 	"token": "EAAGKRJG8eL8BAOzTNWcW6TCi5PBczNMzZBFCJSoXpXKY1u1K1JROUw0R9ZBgebeXBhcF5tZAmayZB3CG21h6HZAlXYfhZBxYtfBUQYvfes4wpYwbZCp70shvXnTEyRKDF19jG2E1eWkYwEOrPhNocq1Q8xMvlyWW3ZCWZANIO2Bg3b0e2mgzkPZCNPHaF7xBGq3P35kQZBt8DxUvTETuhZCSBYtV"
 }
-
+``
 Note: token -> It is given by auth provider like - Facebook, Instagram
 
 ## Output
-
+``
 {
     "access_token": "M5SbatG3IGJco2Df3DhE31Eh1wd52A",
     "expires_in": 36000,
@@ -147,31 +151,34 @@ Note: token -> It is given by auth provider like - Facebook, Instagram
     "scope": "read",
     "refresh_token": "fm7tjcABcdr1Bw8oZxLkOtrvm50TfX"
 }
-
+``
 
 ### If you pass wrong backend instead Facebook 
 ### Output
-
+``
 {
     "error": "access_denied",
     "error_description": "Authentication process canceled"
 }
-
+``
 
 
 ---
 # Check LoggedIn or Not
 
 http://127.0.0.1:8000/api/v1/user/
+OR
+http://127.0.0.1:8000/social/users/me/
 
 #### Headers
+``
 Key				Value
 Authorization	Bearer M5SbatG3IGJco2Df3DhE31Eh1wd52A
-
+``
 key             type   access_key
 
 ## Output
-
+``
 {
     "user": {
         "id": 1,
@@ -180,8 +187,9 @@ key             type   access_key
         "name": "ShyamBabu"
     }
 }
-
+``
 
 # Instagram Authentication API
 
 ## Same as Facebook Authentication
+

@@ -110,6 +110,7 @@ class LoginSerializer(serializers.Serializer):
 
         return {
             'id': user.pk,
+            'name':user.name,
             'email': user.email,
             'token': user.token
         }

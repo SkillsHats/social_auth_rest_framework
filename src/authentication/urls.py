@@ -5,6 +5,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('social/', include('api.social.urls')),
     path('social/auth/', include('rest_framework_social_oauth2.urls')),
     path('api/v1/', include('api.accounts.urls', namespace='accounts')),
     path('api/v1/', include('api.profiles.urls', namespace='profiles')),
