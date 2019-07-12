@@ -14,7 +14,7 @@ http://127.0.0.1:8000/api/v1/users/
 {
 	"user":{
 		"name": "ShyamBabu",
-		"email":"sshyambabu06@gmail.com",
+		"email":"shyambabu@gmail.com",
 		"password":"shyam12345",
 		"phone_number": 9876543210,
 		"age":21,
@@ -29,7 +29,7 @@ http://127.0.0.1:8000/api/v1/users/
     "user": {
         "id": 1,
         "name": "ShyamBabu",
-        "email": "sshyambabu99@gmail.com",
+        "email": "shyambabu@gmail.com",
         "phone_number": "9876543210",
         "age": 21,
         "gender": "male",
@@ -49,7 +49,7 @@ http://127.0.0.1:8000/api/v1/users/login/
 <pre>
 {
 	"user":{
-		"email":"sshyambabu06@gmail.com",
+		"email":"shyambabu@gmail.com",
 		"password":"shyam12345"
 	}
 }
@@ -60,7 +60,7 @@ http://127.0.0.1:8000/api/v1/users/login/
 <pre>
 {
     "user": {
-        "email": "sshyambabu99@gmail.com",
+        "email": "shyambabu@gmail.com",
         "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NiwiZXhwIjoxNTY4MTA4MzI0fQ.fvJjY42BuSA2efOBgTclIOicAf2Maf-i2YxKLrjKYBc"
     }
 }
@@ -86,7 +86,7 @@ key             type   access_key
 {
     "user": {
         "id": 1,
-        "email": "sshyambabu06@gmail.com",
+        "email": "shyambabu@gmail.com",
         "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTY4MTEyNzUyfQ.zY-fxAKocgTZXcleEd9PnvbRtxUrrli5P6xn0EPVrMI",
         "name": "ShyamBabu"
     }
@@ -115,7 +115,7 @@ http://localhost:8000/social/auth/token
 ## Input Data
 <pre>
 {
-	"username": "sshyambabu06@gmail.com",
+	"username": "shyambabu@gmail.com",
 	"password": "shyam12345",
 	"client_id": "R56sborWjWtAqIajntdXAVjcqzUrqREDB9AfD40k",
 	"client_secret": "WaKWRq6AJKBfSfteHZC6uc8rAQ3aloiWgnf3wsSsTPXERmJguKMjRVZLvisVXxhPqIuOkEjKngEBPQDhswo8nksI919Xm62lCCe4vILwOH4IrQFgwzSrMlU7WefcjvDC",
@@ -196,7 +196,7 @@ key             type   access_key
 {
     "user": {
         "id": 1,
-        "email": "sshyambabu06@gmail.com",
+        "email": "shyambabu@gmail.com",
         "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTY4MTEyNzUyfQ.zY-fxAKocgTZXcleEd9PnvbRtxUrrli5P6xn0EPVrMI",
         "name": "ShyamBabu"
     }
